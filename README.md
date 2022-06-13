@@ -1,6 +1,6 @@
 cs-lite
 
-The unofficial website of Community Solidarity. Built with Next.js.
+The unofficial website of Community Solidarity. Built with Next.js and TailwindCSS.
 
 ## Getting Started
 
