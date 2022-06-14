@@ -14,10 +14,10 @@ export const SEO = (props: SEOProps) => {
       ? "https://www.cs-lite.com"
       : "http://localhost:3000";
   const {
-    title = "Community Solidarity",
-    description = "America's largest hunger relief organization.",
+    title = "CS lite",
+    description = "A minimal alternative to communitysolidarity.org",
     path = "/",
-    icon = "longislandclaims.svg",
+    icon = "cs-lite.jpg",
   } = props;
   const URL = `${SITE_URL}${path}`;
   return (
