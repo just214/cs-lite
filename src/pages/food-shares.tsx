@@ -60,7 +60,6 @@ export default function Page() {
                   src={foodShare.mapUrl}
                   width="600"
                   height="450"
-                  loading="lazy"
                   className="rounded-xl aspect-auto w-full md:w-96 h-64"
                   referrerPolicy="no-referrer-when-downgrade"
                 />

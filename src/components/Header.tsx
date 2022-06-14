@@ -14,9 +14,14 @@ export const Header = () => {
         <NavLink
           to="/"
           label={
-            <div className="flex items-center gap-2 font-display">
+            <div className="font-display">
               <p className="text-4xl">
-                COMMUNITY <span className="text-cs-pink">SOLIDARITY</span>
+                CS-<span className="text-cs-pink">LITE</span>
+              </p>
+              <p className="text-sm">
+                <span className="font-sans mr-1">A</span>COMMUNITY{" "}
+                <span className="text-cs-pink">SOLIDARITY</span>
+                <span className="font-sans ml-1">project</span>
               </p>
             </div>
           }
