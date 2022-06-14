@@ -84,7 +84,7 @@ export default function Page() {
               </Link>
             </p>
           </DonationCard>
-          <DonationCard title="Other Ways" icon={FaStar}>
+          <DonationCard title="Superstar" icon={FaStar}>
             <button className="cta mt-4 w-full">
               Become a monthly sustainer!
             </button>

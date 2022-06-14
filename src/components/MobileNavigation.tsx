@@ -20,14 +20,14 @@ export const MobileNavigation = () => {
 
   return (
     <>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <button
           type="button"
           onClick={openModal}
           aria-label="Site Navigation"
           className="p-2 rounded-full hover:bg-gray-500/10 transition-colors ease-in-out"
         >
-          <FaBars className="text-lg text-sky-700" />
+          <FaBars className="text-3xl text-cs-pink" />
         </button>
       </div>
 
@@ -56,11 +56,11 @@ export const MobileNavigation = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-screen h-screen transform overflow-hidden bg-white text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-screen h-screen transform overflow-hidden surface text-left align-middle shadow-xl transition-all">
                   <section className="w-full text-right">
                     <button
                       onClick={closeModal}
-                      className="text-3xl text-sky-700 rounded-full p-2 hover:bg-gray-500/10 focus:bg-gray-500/10 m-2 ring-0 outline-0"
+                      className="text-3xl text-cs-pink rounded-full p-2 hover:bg-gray-500/10 focus:bg-gray-500/10 m-2 ring-0 outline-0"
                     >
                       <FaTimes />
                     </button>
