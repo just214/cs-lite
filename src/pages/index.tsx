@@ -1,22 +1,25 @@
-import { Layout } from "components/Layout";
-import Link from "next/link";
-import { BsHurricane } from "react-icons/bs";
-import { FaHouseDamage, FaHome, FaBuilding, FaBoxes } from "react-icons/fa";
 import { SEO } from "components/SEO";
-
-const highlights = [
-  ["Residential Claims", FaHome],
-  ["Commercial Claims", FaBuilding],
-  ["Daily Adjuster Services", FaHouseDamage],
-  ["Catastrophe Adjuster Services", BsHurricane],
-  ["Contents Services", FaBoxes],
-] as const;
+import { NavLink } from "components/NavLink";
 
 export default function IndexPage() {
   return (
-    <Layout>
+    <div className="grid h-screen place-items-center">
       <SEO />
-      <p>America&apos;s largest hunger relief organization.</p>
-    </Layout>
+      <NavLink
+        to="/"
+        label={
+          <div className="font-display">
+            <p className="text-8xl">
+              CS-<span className="text-cs-pink">LITE</span>
+            </p>
+            <p className="text-lg">
+              <span className="font-sans mr-1">A</span>COMMUNITY{" "}
+              <span className="text-cs-pink">SOLIDARITY</span>
+              <span className="font-sans ml-1">project</span>
+            </p>
+          </div>
+        }
+      />
+    </div>
   );
 }

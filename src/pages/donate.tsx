@@ -12,6 +12,7 @@ import { SEO } from "components/SEO";
 import { Card } from "components/Card";
 import { PayPalDonateButton } from "components/PayPalDonateButton";
 import { donationTypes } from "constants/donationTypes";
+import { NextLink } from "components/NextLink";
 
 type DonationCardProps = {
   title: string;
@@ -24,7 +25,7 @@ export const DonationCard = (props: DonationCardProps) => {
   const { title, icon: Icon, children, Footer } = props;
   return (
     <div className="p-4 surface-alt texture rounded-xl h-72 md:w-80 w-full inline-flex flex-col  items-center justify-between">
-      <div className="flex items-center gap-2 text-white font-bold text-3xl my-4">
+      <div className="flex items-center gap-2 text font-bold text-3xl my-4">
         <Icon className="text-cs-pink" />
         {title}
       </div>
@@ -45,9 +46,9 @@ export default function Page() {
 
       <Card title="Monetary Donation">
         <p className="mb-4">{description}</p>
-        <section className="flex flex-col md:flex-row  gap-4">
+        <section className="flex flex-col md:flex-row gap-4">
           <DonationCard title="PayPal" icon={FaPaypal}>
-            <div className="mt-2">
+            <div className="mt-2 border-dashed border-4  rounded-xl p-4">
               <PayPalDonateButton />
             </div>
           </DonationCard>
@@ -79,9 +80,7 @@ export default function Page() {
           >
             <p className="px-4">
               Visit us at any{" "}
-              <Link href="/food-shares">
-                <a className="anchor">Food Share</a>
-              </Link>
+              <NextLink href="/food-shares">Food Share</NextLink>
             </p>
           </DonationCard>
           <DonationCard title="Superstar" icon={FaStar}>

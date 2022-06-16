@@ -9,9 +9,9 @@ type ContactMethodProps = {
 const ContactMethod = (props: ContactMethodProps) => {
   const { icon: Icon, label, children } = props;
   return (
-    <div className="flex items-center gap-4 text-xl ">
+    <div className="flex items-center gap-4 text-xl">
       <div className="h-8 w-8 rounded-full bg-sky-800 grid place-items-center">
-        <Icon className="text-white" aria-label={label} />
+        <Icon className="text" aria-label={label} />
       </div>
       <div className="text-lg font-medium">{children}</div>
     </div>
@@ -20,7 +20,7 @@ const ContactMethod = (props: ContactMethodProps) => {
 
 export const ContactInfo = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-around flex-wrap p-2 surface-alt texture rounded-xl">
+    <div className="flex flex-col gap-8 md:flex-row items-start md:items-center justify-start md:justify-around flex-wrap p-4 surface-alt texture rounded-xl">
       <ContactMethod icon={MdLocalPhone} label="Phone Number">
         <p>631-223-4370</p>
       </ContactMethod>
