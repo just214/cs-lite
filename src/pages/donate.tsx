@@ -24,8 +24,8 @@ export const DonationCard = (props: DonationCardProps) => {
   const { title, icon: Icon, children, Footer } = props;
   return (
     <div className="p-4 surface-alt texture rounded-xl h-72 md:w-80 w-full inline-flex flex-col  items-center justify-between">
-      <div className="flex items-center gap-2 font-bold text-3xl my-4">
-        <Icon />
+      <div className="flex items-center gap-2 text-white font-bold text-3xl my-4">
+        <Icon className="text-cs-pink" />
         {title}
       </div>
 
@@ -80,7 +80,7 @@ export default function Page() {
             <p className="px-4">
               Visit us at any{" "}
               <Link href="/food-shares">
-                <a className="anchor">Food Share location</a>
+                <a className="anchor">Food Share</a>
               </Link>
             </p>
           </DonationCard>
