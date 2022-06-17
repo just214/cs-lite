@@ -29,7 +29,7 @@ export const DonationCard = (props: DonationCardProps) => {
   const { title, icon: Icon, children, Footer } = props;
   return (
     <div className="p-4 surface-alt texture rounded-xl h-72 md:w-80 w-full inline-flex flex-col  items-center justify-between">
-      <div className="flex items-center gap-2 text font-bold text-3xl my-4 dark:text-yellow-500 text-cs-pink">
+      <div className="flex items-center gap-2 font-bold text-3xl my-4 text">
         <Icon />
         {title}
       </div>
