@@ -1,7 +1,6 @@
 import { SEO } from "components/SEO";
 import { Footer } from "components/Footer";
 import Link from "next/link";
-import { NavLink } from "components/NavLink";
 import { TbHeartHandshake } from "react-icons/tb";
 import { MdOutlineVolunteerActivism } from "react-icons/md";
 import { FaPeopleCarry, FaDonate } from "react-icons/fa";

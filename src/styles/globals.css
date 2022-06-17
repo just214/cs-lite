@@ -31,7 +31,7 @@ p {
   }
 
   .cta {
-    @apply cursor-pointer transition-colors duration-1000 ease-in-out inline-flex  items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-blue-500 to-blue-700;
+    @apply cursor-pointer transition-colors duration-1000 ease-in-out inline-flex  items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-blue-500 to-sky-700;
   }
 
   .surface-alt {
@@ -47,6 +47,6 @@ p {
   }
 
   .border-color {
-    @apply border-gray-200 dark:border-gray-800;
+    @apply border-slate-300 dark:border-slate-800;
   }
 }

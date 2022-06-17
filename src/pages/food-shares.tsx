@@ -1,7 +1,6 @@
 import { Layout } from "components/Layout";
 import { SEO } from "components/SEO";
 import { SectionTitle } from "components/SectionTitle";
-import { Card } from "components/Card";
 import { foodShares } from "constants/foodShares";
 import { GiWalk } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa";

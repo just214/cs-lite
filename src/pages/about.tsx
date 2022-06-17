@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
-import { FaLightbulb } from "react-icons/fa";
+import { FaQuestionCircle } from "react-icons/fa";
 import { Layout } from "components/Layout";
 import { SEO } from "components/SEO";
 import { SectionTitle } from "components/SectionTitle";
@@ -62,13 +62,13 @@ export default function Page() {
     <Layout>
       <SEO />
 
-      <div className="w-full grid grid-cols-8 gap-8">
+      <div className="w-full grid grid-cols-8 gap-8 auto-rows-fr">
         <section className=" w-full col-span-8 lg:col-span-3">
           <SectionTitle>About Us</SectionTitle>
-          <div className="texture surface-alt rounded-xl p-4">
+          <div className="texture surface-alt rounded-xl p-4 mt-8 pb-24 h-full">
             <div className="surface p-4 rounded-xl mb-4">
-              <p className="flex items-center gap-2 text-yellow-500 font-medium ">
-                <FaLightbulb />
+              <p className="flex items-center gap-2 text-yellow-500 font-semibold text-xl mb-2">
+                <FaQuestionCircle />
                 Did you know?
               </p>
               <p>
@@ -134,9 +134,7 @@ export default function Page() {
             </ul>
             <div className="w-full text-center">
               <Link href="/donate">
-                <a className="cta my-6 w-full">
-                  Learn how you can get involved!
-                </a>
+                <a className="cta my-12">Learn how you can get involved!</a>
               </Link>
             </div>
           </div>
@@ -144,7 +142,7 @@ export default function Page() {
 
         <div className="space-y-8 col-span-8 lg:col-span-5">
           <SectionTitle>Photos</SectionTitle>
-          <section className="texture p-4 rounded-xl surface-alt">
+          <div className="texture p-4 rounded-xl surface-alt">
             <Carousel
               width="100%"
               className="w-full max-w-96"
@@ -157,11 +155,12 @@ export default function Page() {
                 <img key={photo} src={photo} alt="CS Photos" />
               ))}
             </Carousel>
-          </section>
+          </div>
           <SectionTitle>Videos</SectionTitle>
           <section className="texture p-4 rounded-xl surface-alt">
             <Carousel
               width="100%"
+              className="w-full max-w-96"
               emulateTouch={true}
               showArrows={true}
               showThumbs={true}

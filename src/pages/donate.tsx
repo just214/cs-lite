@@ -6,17 +6,14 @@ import {
   FaWalking,
   FaCheckCircle,
   FaStar,
-  FaCcMastercard,
-  FaCcVisa,
-  FaCcAmex,
-  FaCcDiscover,
   FaRedo,
 } from "react-icons/fa";
 import { Layout } from "components/Layout";
 import { SEO } from "components/SEO";
-import { Card } from "components/Card";
+import { DonateButton } from "components/DonateButton";
 import { donationTypes } from "constants/donationTypes";
 import { FoodSharesLink } from "components/FoodSharesLink";
+import { SectionTitle } from "components/SectionTitle";
 
 type DonationCardProps = {
   title: string;
@@ -48,7 +45,8 @@ export default function Page() {
     <Layout>
       <SEO title="Donate to Community Solidarity" description={description} />
 
-      <Card title="Monetary Donation">
+      <div>
+        <SectionTitle>Monetary Donation</SectionTitle>
         <p className="mb-4">{description}</p>
         <section className="flex flex-col md:flex-row gap-4">
           <DonationCard
@@ -60,48 +58,7 @@ export default function Page() {
               </p>
             }
           >
-            <form
-              action="https://www.paypal.com/cgi-bin/webscr"
-              method="post"
-              target="_blank"
-            >
-              <div className="inner_content">
-                <input name="landing_page" type="hidden" value="billing" />
-                <input
-                  name="cpp_cart_border_color"
-                  type="hidden"
-                  value="FF0000"
-                />
-                <input name="cpp_payflow_color" type="hidden" value="D20137" />
-                <input
-                  name="business"
-                  type="hidden"
-                  value="jonsteps@communitysolidarity.org"
-                />
-                <input name="cmd" type="hidden" value="_donations" />
-                <input
-                  type="hidden"
-                  name="notify_url"
-                  value="https://communitysolidarity.us7.list-manage.com/subscribe/paypal-ipn?u=d526e39052615c32057079576&amp;id=775a503f33"
-                />
-                <input
-                  type="hidden"
-                  name="return"
-                  value="https://communitysolidarity.org/donate/funds/thank_you"
-                />
-                <input name="item_name" type="hidden" value="Donation" />
-
-                <input name="currency_code" type="hidden" value="USD" />
-              </div>
-
-              <button type="submit" className="cta flex-col !w-72">
-                <p>Donate now!</p>
-                <div className="items-center gap-1 flex">
-                  <FaCcVisa /> <FaCcMastercard /> <FaCcAmex />
-                  <FaCcDiscover />
-                </div>
-              </button>
-            </form>
+            <DonateButton />
           </DonationCard>
 
           <DonationCard
@@ -152,9 +109,10 @@ export default function Page() {
             </a>
           </DonationCard>
         </section>
-      </Card>
+      </div>
 
-      <Card className=" mt-4" title="Other Useful Donations">
+      <div className="mt-4">
+        <SectionTitle>Other Useful Donations</SectionTitle>
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {donationTypes.map((type) => {
             const [label, Icon] = type;
@@ -169,7 +127,7 @@ export default function Page() {
             );
           })}
         </ul>
-      </Card>
+      </div>
     </Layout>
   );
 }
