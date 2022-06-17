@@ -15,9 +15,9 @@ export const SEO = (props: SEOProps) => {
       : "http://localhost:3000";
   const {
     title = "CS lite",
-    description = "A minimal alternative to communitysolidarity.org",
+    description = "Welcome to CS Lite, a Community Solidarity project.",
     path = "/",
-    icon = "cs-lite.jpg",
+    icon = "cs-lite.png",
   } = props;
   const URL = `${SITE_URL}${path}`;
   return (
