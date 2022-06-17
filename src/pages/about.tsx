@@ -68,7 +68,7 @@ export default function Page() {
           <SectionTitle>About Community Solidarity</SectionTitle>
           <div className="max-w-4xl">
             <div className="surface p-4 rounded-xl mb-4">
-              <p className="flex items-center gap-2 text-yellow-500">
+              <p className="flex items-center gap-2 text-yellow-600 font-medium">
                 <FaLightbulb />
                 Did you know?
               </p>
