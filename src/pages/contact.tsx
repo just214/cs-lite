@@ -1,6 +1,5 @@
 import { Layout } from "components/Layout";
 import { SEO } from "components/SEO";
-import { Card } from "components/Card";
 import { ContactInfo } from "components/ContactInfo";
 import { SectionTitle } from "components/SectionTitle";
 

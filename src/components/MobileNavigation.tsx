@@ -71,7 +71,7 @@ export const MobileNavigation = () => {
                   <section className="w-full text-center mt-8">
                     <button
                       onClick={closeModal}
-                      className="m-4 p-2 border-2 border-sky-700 text-sky-800 font-medium rounded-lg w-44"
+                      className="m-4 p-2 border-2 border-cs-pink text-cs-pink font-medium rounded-lg w-44"
                     >
                       Close
                     </button>

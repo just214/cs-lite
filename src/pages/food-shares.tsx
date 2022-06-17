@@ -14,7 +14,7 @@ export default function Page() {
       <SEO />
       <div>
         <SectionTitle>Food Share Locations</SectionTitle>
-        <section className="flex flex-col items-center gap-4">
+        <section className="flex flex-col items-center gap-12">
           {foodShares.map((foodShare) => {
             const dayOfWeek = getDay(foodShare.dayOfTheWeek);
             return (
@@ -34,7 +34,7 @@ export default function Page() {
                   <p>Distribution @ {foodShare.distributionStartTime}</p>
 
                   <p>Located at {foodShare.address}</p>
-                  <p className="uppercase font-medium text-xs w-42 flex-shrink-0 surface wiggles mt-2 rounded-full py-1 px-4 inline-flex items-center gap-2">
+                  <p className="uppercase font-medium text-xs w-42 flex-shrink-0 bg-cs-pink text-white wiggles mt-2 rounded-full py-1 px-4 inline-flex items-center gap-2">
                     {["Drive Up", "Drive or Walk Up"].includes(
                       foodShare.distributionType
                     ) && <FaCarSide className="text-lg" />}{" "}
@@ -43,7 +43,7 @@ export default function Page() {
                     ) && <GiWalk className="text-lg" />}{" "}
                     {foodShare.distributionType}
                   </p>
-                  <div className="mt-2">
+                  <div className="mt-6">
                     <a
                       className="cta"
                       target="_blank"

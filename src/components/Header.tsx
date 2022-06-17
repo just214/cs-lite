@@ -15,7 +15,7 @@ export const Header = () => {
           to="/"
           label={
             <div className="font-display">
-              <p className="text-4xl">
+              <p className="text-5xl">
                 CS-<span className="text-cs-pink">LITE</span>
               </p>
               <p className="text-sm">

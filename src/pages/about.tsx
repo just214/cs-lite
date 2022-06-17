@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import { FaLightbulb } from "react-icons/fa";
@@ -6,10 +5,10 @@ import { Layout } from "components/Layout";
 import { SEO } from "components/SEO";
 import { SectionTitle } from "components/SectionTitle";
 import ReactPlayer from "react-player";
-import { NextLink } from "components/NextLink";
+import { FoodSharesLink } from "components/FoodSharesLink";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const NUMBER_OF_PHOTOS = 20;
+const NUMBER_OF_PHOTOS = 65;
 
 const YOUTUBE_VIDEO_IDS = [
   "SbZTR5rMvn4",
@@ -64,11 +63,11 @@ export default function Page() {
       <SEO />
 
       <div className="w-full grid grid-cols-8 gap-8">
-        <section className="texture surface-alt rounded-xl p-4 w-full col-span-8 lg:col-span-3">
-          <SectionTitle>About Community Solidarity</SectionTitle>
-          <div className="max-w-4xl">
+        <section className=" w-full col-span-8 lg:col-span-3">
+          <SectionTitle>About Us</SectionTitle>
+          <div className="texture surface-alt rounded-xl p-4">
             <div className="surface p-4 rounded-xl mb-4">
-              <p className="flex items-center gap-2 text-yellow-600 font-medium">
+              <p className="flex items-center gap-2 text-yellow-500 font-medium ">
                 <FaLightbulb />
                 Did you know?
               </p>
@@ -99,9 +98,9 @@ export default function Page() {
                   We are a group of volunteers who rescue and distribute fresh,
                   vegetarian groceries to families in need all across Long
                   Island and Brooklyn. The food is distributed at our five{" "}
-                  <NextLink href="/food-shares">Food Shares</NextLink>. You can
-                  think of a Food Shares as essentially free plant-based grocery
-                  stores that are located across Long Island &apos; NYC.
+                  <FoodSharesLink />. You can think of a Food Shares as
+                  essentially free plant-based grocery stores that are located
+                  across Long Island &apos; NYC.
                 </p>
               </li>
               <li>
@@ -135,20 +134,23 @@ export default function Page() {
             </ul>
             <div className="w-full text-center">
               <Link href="/donate">
-                <a className="cta my-6">Learn how you can get involved!</a>
+                <a className="cta my-6 w-full">
+                  Learn how you can get involved!
+                </a>
               </Link>
             </div>
           </div>
         </section>
 
         <div className="space-y-8 col-span-8 lg:col-span-5">
+          <SectionTitle>Photos</SectionTitle>
           <section className="texture p-4 rounded-xl surface-alt">
-            <SectionTitle>Photos</SectionTitle>
             <Carousel
               width="100%"
               className="w-full max-w-96"
               showThumbs={true}
               autoPlay={true}
+              showIndicators={false}
             >
               {photos.map((photo) => (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -156,9 +158,8 @@ export default function Page() {
               ))}
             </Carousel>
           </section>
+          <SectionTitle>Videos</SectionTitle>
           <section className="texture p-4 rounded-xl surface-alt">
-            <SectionTitle>Videos</SectionTitle>
-
             <Carousel
               width="100%"
               emulateTouch={true}

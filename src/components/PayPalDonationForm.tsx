@@ -1,4 +1,4 @@
-export const DonationForm = () => {
+export const PayPalDonationForm = () => {
   return (
     <div>
       <div>
@@ -9,6 +9,7 @@ export const DonationForm = () => {
             action="https://www.paypal.com/cgi-bin/webscr"
             method="post"
             target="_blank"
+            className="single-donation-form donation-form"
           >
             <div className="inner_content">
               <h3>Make a Donation</h3>
@@ -96,7 +97,7 @@ export const DonationForm = () => {
               <input name="currency_code" type="hidden" value="USD" />
               <br></br>
             </div>
-            <button type="submit" className="cta">
+            <button type="submit" className="donation-submit-button">
               Donate now
             </button>
           </form>
