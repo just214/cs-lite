@@ -32,7 +32,7 @@ export const DonationCard = (props: DonationCardProps) => {
       </div>
 
       <div className="my-4 text-center text">{children}</div>
-      <div>{Footer}</div>
+      <div className="w-full">{Footer}</div>
     </div>
   );
 };
@@ -111,7 +111,7 @@ export default function Page() {
         </section>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-12">
         <SectionTitle>Other Useful Donations</SectionTitle>
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {donationTypes.map((type) => {

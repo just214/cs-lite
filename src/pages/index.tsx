@@ -49,7 +49,7 @@ export default function IndexPage() {
           <span className="font-sans ml-1">project</span>
         </p>
       </div>
-      <div className="flex items-center justify-center flex-wrap gap-8">
+      <div className="flex items-center justify-center flex-wrap gap-8 container mx-auto">
         {links.map((link) => {
           const Icon = link.icon;
           const base =

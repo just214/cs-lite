@@ -10,16 +10,11 @@ export default function Page() {
       <SEO />
       <div>
         <SectionTitle>Volunteer</SectionTitle>
-        <section className="max-w-4xl texture rounded-xl surface-alt p-4">
+        <section className="max-w-4xl texture rounded-xl surface-alt p-4 md:p-6">
           <p>
-            It&apos;s not easy sharing as much fresh vegetarian groceries as we
-            do, and we definitely couldn&apos;t do it without our awesome
-            volunteers. If you would like to be part of our mission, we would
-            love to have you!
-          </p>
-
-          <p className="mt-4">
-            Here are just some of the ways that you can get involved:
+            We couldn&apos;t do what we do without our awesome volunteers and
+            community members. Here are just some of the ways that you can get
+            involved:
           </p>
 
           <ul className="list-disc ml-6 mt-8">
