@@ -1,9 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
 import { NavLink } from "./NavLink";
 
 // Components
-import { CallUsButton } from "components/CallUsButton";
 import { NavigationMenu } from "components/NavigationMenu";
 import { MobileNavigation } from "components/MobileNavigation";
 
