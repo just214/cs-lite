@@ -81,9 +81,9 @@ export default function Page() {
               <li>
                 <p>
                   Community Solidarity is a 501(c)3 nonprofit organization
-                  founded in 2011 with the goal of fighting the social, economic
-                  and environmental oppressions that are inflicted upon our
-                  community and our planet.
+                  founded in 2011 with the goal of fighting the social,
+                  economic, and environmental oppressions that are inflicted
+                  upon our community and our planet.
                 </p>
               </li>
               <li>
