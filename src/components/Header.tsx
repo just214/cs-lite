@@ -16,7 +16,8 @@ export const Header = () => {
           label={
             <div className="font-display">
               <p className="text-5xl">
-                CS-<span className="text-cs-pink">LITE</span>
+                C<span className="text-cs-pink">S</span>
+                <span className="text-2xl ml-2">Lite</span>
               </p>
               <p className="text-sm">
                 <span className="font-sans mr-1">A</span>COMMUNITY{" "}
