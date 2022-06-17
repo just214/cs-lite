@@ -15,8 +15,8 @@ const links = [
   },
   { href: "/volunteer", label: "Volunteer", icon: FaPeopleCarry },
   { href: "/donate", label: "Donate", icon: FaDonate },
-  { href: "/about-us", label: "About Us", icon: TbHeartHandshake },
-  { href: "/contact-us", label: "Contact Us", icon: BsMailbox2 },
+  { href: "/about", label: "About Us", icon: TbHeartHandshake },
+  { href: "/contact", label: "Contact Us", icon: BsMailbox2 },
 ];
 
 export default function IndexPage() {
