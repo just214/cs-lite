@@ -65,7 +65,7 @@ export default function Page() {
             title="By Mail"
             icon={FaMailBulk}
             Footer={
-              <p className="w-full flex items-center gap-2 my-2 text-base border-l-2 border-cs-pink surface p-2 text-cs-pink">
+              <p className="w-full flex items-center gap-2 my-2 text-base border-l-2 border-red-400 surface p-2 text-red-400">
                 <FaExclamationCircle /> Please do not mail cash.
               </p>
             }
