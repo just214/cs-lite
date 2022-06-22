@@ -3,7 +3,7 @@ import { Footer } from "components/Footer";
 import Link from "next/link";
 import { TbHeartHandshake } from "react-icons/tb";
 import { MdOutlineVolunteerActivism } from "react-icons/md";
-import { FaPeopleCarry, FaDonate } from "react-icons/fa";
+import { FaPeopleCarry, FaDonate, FaInfoCircle } from "react-icons/fa";
 import { BsMailbox2 } from "react-icons/bs";
 
 const links = [
@@ -49,6 +49,25 @@ export default function IndexPage() {
           <span className="font-sans ml-1">project</span>
         </p>
       </div>
+      <section className="container mx-auto max-w-4xl">
+        <p className="p-4 rounded-xl texture surface-alt my-6 ">
+          <FaInfoCircle className="text-cs-pink inline mr-2 text-xl" />
+          <span>
+            CS Lite is a minimal version of the official Community Solidarity
+            site. You can visit the official site at
+          </span>
+          <a
+            href="https://www.communitysolidarity.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="anchor"
+          >
+            {" "}
+            www.communitysolidarity.org
+          </a>
+          <span>.</span>
+        </p>
+      </section>
       <div className="flex items-center justify-center flex-wrap gap-8 container mx-auto">
         {links.map((link) => {
           const Icon = link.icon;

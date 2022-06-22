@@ -43,7 +43,7 @@ p {
   }
 
   .anchor {
-    @apply text-blue-500 hover:underline focus:underline;
+    @apply text-cs-pink hover:underline focus:underline font-medium;
   }
 
   .border-color {
