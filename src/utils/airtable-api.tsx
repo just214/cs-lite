@@ -6,7 +6,7 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN }).base(
 );
 
 export async function fetchFoodShares(): Promise<AirTableFoodShare[]> {
-  const results = [];
+  const results: AirTableFoodShare[] = [];
   return base("Food Shares")
     .select({
       maxRecords: 10,
@@ -14,7 +14,8 @@ export async function fetchFoodShares(): Promise<AirTableFoodShare[]> {
     })
     .eachPage((records, fetchNextPage) => {
       records.forEach((record) => {
-        results.push(record);
+        // eslint-disable-next-line functional/immutable-data
+        results.push(record as any);
       });
       fetchNextPage();
     })
