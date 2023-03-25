@@ -17,7 +17,7 @@ export default async function FoodSharePage() {
       {shares.map((foodShare: AirTableFoodShare) => {
         const dayOfWeek = foodShare.fields["Day Of Week"];
         return (
-          <Card key={foodShare.fields.Link} className="my-12">
+          <Card key={foodShare.fields.Link} className="mb-12">
             <div className="p-4 md:p-6 ease-in-out w-full flex flex-col md:flex-row items-center gap-8 justify-between">
               <section>
                 <p className="display-text text-5xl text-cs-pink">
