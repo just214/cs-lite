@@ -1,9 +1,8 @@
 import {
-  FaCcMastercard,
-  FaCcVisa,
   FaCcAmex,
   FaCcDiscover,
-  FaRedo,
+  FaCcMastercard,
+  FaCcVisa,
 } from "react-icons/fa";
 
 export const DonateButton = () => (
@@ -39,9 +38,9 @@ export const DonateButton = () => (
 
     <button
       type="submit"
-      className="cursor-pointer transition-colors duration-1000  ease-in-out inline-flex glow   items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-[magenta]  to-sky-700 flex-col !w-72"
+      className="display-text tracking-wider text-gray-800 text-4xl uppercase font-bold cursor-pointer ease-in-out inline-flex glow items-center gap-2 justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl from-pink-500  to-sky-300 flex-col !w-72 transition-all duration-200"
     >
-      <p className="font-bold text-xl uppercase">Donate now!</p>
+      <span>Donate now!</span>
       <div className="items-center gap-1 flex text-xl">
         <FaCcVisa /> <FaCcMastercard /> <FaCcAmex />
         <FaCcDiscover />

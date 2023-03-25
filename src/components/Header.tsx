@@ -1,33 +1,36 @@
-import { NavLink } from "./NavLink";
-
-// Components
-import { NavigationMenu } from "components/NavigationMenu";
 import { MobileNavigation } from "components/MobileNavigation";
+import { NavigationMenu } from "components/NavigationMenu";
+import { ThemeSwitch } from "components/ThemeSwitch";
+
+import { NavLink } from "./NavLink";
 
 export const Header = () => {
   return (
-    <header className="p-4 my-4 md:my-12 flex lg:items-center justify-between flex-col lg:flex-row">
-      <section className="flex flex-1  items-center justify-between">
+    <header className="p-2 pb-0 flex lg:items-center justify-between flex-col lg:flex-row xl:container mx-auto">
+      <section className="flex flex-1 items-center justify-between">
         <NavLink
           to="/"
           label={
-            <div className="font-display">
-              <p className="text-5xl">
+            <div>
+              <p className="text-6xl display-text">
                 C<span className="text-cs-pink">S</span>
                 <span className="text-2xl ml-2">Lite</span>
               </p>
-              <p className="text-sm">
-                <span className="font-sans mr-1">A</span>COMMUNITY{" "}
-                <span className="text-cs-pink">SOLIDARITY</span>
-                <span className="font-sans ml-1">project</span>
+              <p className="text-[10px] xl:text-sm text-alt -mt-2">
+                <span className="font-sans">A</span>
+                <span className="text display-text"> COMMUNITY </span>
+                <span className="text-cs-pink display-text">SOLIDARITY </span>
+                <span className="font-sans">project</span>
               </p>
             </div>
           }
         />
 
-        <section className="hidden lg:block">
+        <section className="hidden lg:flex items-center">
           <NavigationMenu orientation="row" />
+          <ThemeSwitch />
         </section>
+
         <MobileNavigation />
       </section>
     </header>
