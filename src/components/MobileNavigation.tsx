@@ -1,8 +1,9 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
+import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import { NavigationMenu } from "components/NavigationMenu";
@@ -11,6 +12,7 @@ import { ThemeSwitch } from "components/ThemeSwitch";
 import { IconButton } from "./IconButton";
 
 export const MobileNavigation = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -20,6 +22,10 @@ export const MobileNavigation = () => {
   function openModal() {
     setIsOpen(true);
   }
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <>

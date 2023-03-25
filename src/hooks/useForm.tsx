@@ -18,10 +18,7 @@ export function useForm(handleSubmit: (e) => Promise<Response>): UseFormProps {
       setStatus("pending");
       const response = await handleSubmit(event);
 
-      console.log({ response });
       const result = await response.json();
-
-      console.log({ result });
 
       if (result.status === "error") {
         setStatus("error");

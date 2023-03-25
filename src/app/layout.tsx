@@ -25,7 +25,7 @@ export default function RootLayout({ children }: Props) {
       <body className={`${bebas.variable} surface text`}>
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
-            <div className="sticky top-0  z-10 mb-8 p-4 backdrop-blur-xl bg-gray-300/40 dark:bg-gray-900/40">
+            <div className="sticky top-0 z-10 mb-4 md:mb-8 p-4 backdrop-blur-xl bg-gray-300/40 dark:bg-gray-900/40">
               <Header />
             </div>
 
