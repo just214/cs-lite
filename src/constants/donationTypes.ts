@@ -1,15 +1,14 @@
-import {
-  GiFruitBowl,
-  GiClothes,
-  GiPlantSeed,
-  GiBookshelf,
-  GiGamepad,
-  GiFireFlower,
-  GiCookingPot,
-} from "react-icons/gi";
 import { BiBusSchool } from "react-icons/bi";
-import { FaBriefcaseMedical, FaBicycle } from "react-icons/fa";
-import { GrBike } from "react-icons/gr";
+import { FaBicycle, FaBriefcaseMedical } from "react-icons/fa";
+import {
+  GiBookshelf,
+  GiClothes,
+  GiCookingPot,
+  GiFireFlower,
+  GiFruitBowl,
+  GiGamepad,
+  GiPlantSeed,
+} from "react-icons/gi";
 
 export const donationTypes = [
   ["Vegetarian Food Items", GiFruitBowl],

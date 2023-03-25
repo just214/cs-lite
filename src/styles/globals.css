@@ -1,8 +1,4 @@
 @tailwind base;
-
-p {
-  @apply text-lg;
-}
 @tailwind components;
 @tailwind utilities;
 
@@ -30,23 +26,31 @@ p {
     @apply bg-white dark:bg-gray-800;
   }
 
-  .cta {
-    @apply cursor-pointer transition-colors duration-1000 ease-in-out inline-flex  items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-blue-500 to-sky-700;
+  .btn {
+    @apply display-text cursor-pointer transition-colors duration-1000 ease-in-out inline-flex  items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-blue-500 to-sky-700;
   }
 
   .surface-alt {
     @apply bg-gray-100 dark:bg-gray-900;
   }
 
+  .display-text {
+    @apply font-display tracking-wide;
+  }
+
   .text {
-    @apply text-gray-800 dark:text-gray-100;
+    @apply text-gray-800 dark:text-white text-lg font-normal;
+  }
+
+  .text-alt {
+    @apply text-gray-600 dark:text-gray-200;
+  }
+
+  .border-color {
+    @apply border-gray-500 dark:border-gray-300;
   }
 
   .anchor {
     @apply text-cs-pink hover:underline focus:underline font-medium;
-  }
-
-  .border-color {
-    @apply border-slate-300 dark:border-slate-800;
   }
 }

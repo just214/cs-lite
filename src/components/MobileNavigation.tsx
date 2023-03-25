@@ -1,14 +1,17 @@
-import { Dialog, Transition } from "@headlessui/react";
+"use client";
+
 import { Fragment, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+
+import { Dialog, Transition } from "@headlessui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import { NavigationMenu } from "components/NavigationMenu";
+import { ThemeSwitch } from "components/ThemeSwitch";
+
+import { IconButton } from "./IconButton";
 
 export const MobileNavigation = () => {
-  let [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -21,14 +24,9 @@ export const MobileNavigation = () => {
   return (
     <>
       <div className="block lg:hidden">
-        <button
-          type="button"
-          onClick={openModal}
-          aria-label="Site Navigation"
-          className="p-2 rounded-full hover:bg-gray-500/10 transition-colors ease-in-out"
-        >
+        <IconButton onClick={openModal} label="Site Navigation">
           <FaBars className="text-3xl text-cs-pink" />
-        </button>
+        </IconButton>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -66,12 +64,16 @@ export const MobileNavigation = () => {
                     </button>
                   </section>
 
+                  <div className="text-center mb-8">
+                    <ThemeSwitch />
+                  </div>
+
                   <NavigationMenu orientation="col" />
 
                   <section className="w-full text-center mt-8">
                     <button
                       onClick={closeModal}
-                      className="m-4 p-2 border-2 border-cs-pink text-cs-pink font-medium rounded-lg w-44"
+                      className="m-4 p-2 border-2 border-color font-medium rounded-lg w-44"
                     >
                       Close
                     </button>

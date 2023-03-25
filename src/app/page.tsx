@@ -1,10 +1,13 @@
-import { SEO } from "components/SEO";
-import { Footer } from "components/Footer";
 import Link from "next/link";
-import { TbHeartHandshake } from "react-icons/tb";
-import { MdOutlineVolunteerActivism } from "react-icons/md";
-import { FaPeopleCarry, FaDonate, FaInfoCircle } from "react-icons/fa";
 import { BsMailbox2 } from "react-icons/bs";
+import {
+  FaDonate,
+  FaInfoCircle,
+  FaPeopleCarry,
+  FaUserLock,
+} from "react-icons/fa";
+import { MdOutlineVolunteerActivism } from "react-icons/md";
+import { TbHeartHandshake } from "react-icons/tb";
 
 const links = [
   {
@@ -32,26 +35,20 @@ const links = [
     icon: BsMailbox2,
     bg: "bg-slate-500",
   },
+  {
+    href: "/portal",
+    label: "Volunteer Portal",
+    icon: FaUserLock,
+    bg: "bg-red-500",
+  },
 ];
 
 export default function IndexPage() {
   return (
     <div className="mx-auto text-center p-2">
-      <SEO />
-      <div className="font-display my-12">
-        <p className="text-8xl">
-          C<span className="text-cs-pink">S</span>
-          <span className="ml-2 text-3xl">lite</span>
-        </p>
-        <p className="text-lg">
-          <span className="font-sans mr-1">A</span>COMMUNITY{" "}
-          <span className="text-cs-pink">SOLIDARITY</span>
-          <span className="font-sans ml-1">project</span>
-        </p>
-      </div>
       <section className="container mx-auto max-w-4xl">
-        <p className="p-4 rounded-xl texture surface-alt my-6 ">
-          <FaInfoCircle className="text-cs-pink inline mr-2 text-xl" />
+        <p className="p-4 rounded-xl texture font-semibold surface-alt my-6 text-xl ">
+          <FaInfoCircle className="text-cs-pink inline mr-2" />
           <span>
             CS Lite is a minimal version of the official Community Solidarity
             site. You can visit the official site at
@@ -65,25 +62,30 @@ export default function IndexPage() {
             {" "}
             www.communitysolidarity.org
           </a>
-          <span>.</span>
+          .
         </p>
       </section>
       <div className="flex items-center justify-center flex-wrap gap-8 container mx-auto">
         {links.map((link) => {
           const Icon = link.icon;
-          const base =
-            "text-white text-3xl w-full h-52 md:w-72 md:h-72 bubbles p-4 flex flex-col items-center justify-center rounded-xl hover:shadow-lg focus:shadow-lg  transition-colors hover:bg-cs-pink focus:bg-cs-pink hover:text-white focus:text-white ease-in-out";
+          const baseClasses =
+            "display-text text-white text-3xl w-full h-52 md:w-72 md:h-72 bubbles p-4 flex flex-col items-center justify-center  rounded-xl";
+          const pseudoClasses =
+            "hover:shadow-xl focus:shadow-xl  transition-all ease-in-out";
           return (
-            <Link href={link.href} key={link.href}>
-              <a className={`${base} ${link.bg} group`}>
-                <Icon className="group-hover:animate-pulse" />
-                <p className="mt-2 text-4xl font-display">{link.label}</p>
-              </a>
+            <Link
+              href={link.href}
+              key={link.href}
+              className={`${baseClasses} ${pseudoClasses} ${link.bg} group`}
+            >
+              <Icon />
+              <p className="mt-2 text-4xl display-text group-hover:underline">
+                {link.label}
+              </p>
             </Link>
           );
         })}
       </div>
-      <Footer />
     </div>
   );
 }

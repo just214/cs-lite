@@ -1,4 +1,7 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { usePathname } from "next/navigation";
+
 import { NavLink } from "components/NavLink";
 
 const navLinks = [
@@ -7,6 +10,7 @@ const navLinks = [
   ["Donate", "/donate"],
   ["About Us", "/about"],
   ["Contact Us", "/contact"],
+  ["Portal", "/portal"],
 ];
 
 export const NavigationMenu = ({
@@ -14,18 +18,18 @@ export const NavigationMenu = ({
 }: {
   orientation: "row" | "col";
 }) => {
-  const router = useRouter();
+  const pathname = usePathname();
   const isRow = orientation === "row";
   return (
     <nav className="">
       <ul
         className={`${
-          isRow ? "flex-row gap-2 mr-8" : "flex-col gap-8"
-        } flex items-center font-display`}
+          isRow ? "flex-row gap-0" : "flex-col gap-8"
+        } flex items-center display-text text-cs-pink`}
       >
         {navLinks.map(([label, to]) => (
           <li key={to}>
-            <NavLink to={to} label={label} isActive={router.pathname === to} />
+            <NavLink to={to} label={label} isActive={pathname === to} />
           </li>
         ))}
       </ul>
