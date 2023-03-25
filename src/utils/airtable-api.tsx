@@ -15,7 +15,7 @@ export async function fetchFoodShares(): Promise<AirTableFoodShare[]> {
     .eachPage((records, fetchNextPage) => {
       records.forEach((record) => {
         // eslint-disable-next-line functional/immutable-data
-        results.push(record as any);
+        results.push(record as unknown as AirTableFoodShare);
       });
       fetchNextPage();
     })
