@@ -53,4 +53,12 @@
   .anchor {
     @apply text-cs-pink hover:underline focus:underline font-medium;
   }
+
+  .input {
+    @apply p-2 border-2 border-color rounded-lg mb-8 surface-alt;
+  }
+
+  .list {
+    @apply list-disc pl-6;
+  }
 }

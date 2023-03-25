@@ -1,18 +1,19 @@
 import { BsMailbox2 } from "react-icons/bs";
 import { MdLocalPhone, MdOutlineAlternateEmail } from "react-icons/md";
 
-import { CardSection } from "components/CardSection";
+import { Card } from "components/Card";
 import { FoodSharesLink } from "components/FoodSharesLink";
+import { SectionTitle } from "components/SectionTitle";
+
+import { ContactForm } from "./contact-form";
 
 export default function ContactPage() {
   return (
-    <CardSection title="Contact Us">
-      <div className="px-2 md:px-8">
-        <p className="my-8">
-          Reach out with any of the methods below or drop by anyone of our{" "}
-          <FoodSharesLink /> to meet up in person!
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 align-middle">
+    <div>
+      <SectionTitle>Contact Us</SectionTitle>
+      <p className="font-medium text-2xl mb-4">We&apos;re not hard to reach!</p>
+      <Card>
+        <div className="flex flex-col lg:flex-row gap-4 items-start justify-around lg:items-center">
           <ContactMethod icon={MdLocalPhone} label="Phone Number">
             <p>631-223-4370</p>
           </ContactMethod>
@@ -26,8 +27,18 @@ export default function ContactPage() {
             <p>Huntington, NY 11743</p>
           </ContactMethod>
         </div>
-      </div>
-    </CardSection>
+      </Card>
+
+      <ul className="list space-y-2 my-8">
+        <li>Fill out the contact form below.</li>
+        <li>Call, email, or mail us.</li>
+        <li>
+          Drop by any of our <FoodSharesLink /> to chat in person!
+        </li>
+      </ul>
+
+      <ContactForm />
+    </div>
   );
 }
 

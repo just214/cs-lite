@@ -1,4 +1,5 @@
 import Airtable from "airtable";
+import { NextApiRequest, NextApiResponse } from "next";
 
 import { AirTableFoodShare } from "types";
 const base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN }).base(
@@ -22,4 +23,27 @@ export async function fetchFoodShares(): Promise<AirTableFoodShare[]> {
     .then((v) => {
       return results;
     });
+}
+
+export function formSubmission(tableName: string) {
+  return (req: NextApiRequest, res: NextApiResponse) => {
+    const body = req.body;
+
+    base(tableName).create(
+      [
+        {
+          fields: body,
+        },
+      ],
+      function (err) {
+        if (err) {
+          console.error(err);
+          res.status(500).json({ status: "error" });
+          return;
+        }
+        res.status(200).json({ status: "success" });
+        return;
+      }
+    );
+  };
 }
