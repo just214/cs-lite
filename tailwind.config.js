@@ -12,6 +12,15 @@ module.exports = {
         "cs-pink": "#ea3968",
         "cs-gray": "#0A0A0A",
       },
+      animation: {
+        fade: "fade 1s ease-in-out",
+      },
+      keyframes: {
+        fade: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
     },
   },
 };
