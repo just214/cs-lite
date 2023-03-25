@@ -34,7 +34,9 @@ function DonationCard(props: DonationCardProps) {
           {title}
         </div>
 
-        <div className="my-4 text-center text flex-1">{children}</div>
+        <div className="my-4 text-center text flex-1 flex flex-col justify-center items-center">
+          {children}
+        </div>
         <div className="w-full">{Footer}</div>
       </div>
     </Card>
@@ -79,7 +81,7 @@ export default function Page() {
               />
             }
           >
-            <div className="text-center border-4 border-dashed border-color p-2 rounded-xl">
+            <div className="text-xl font-medium">
               <p className="font-medium">PO Box 208 </p>
               <p className="font-medium">Huntington, NY 11743</p>
             </div>
@@ -97,7 +99,7 @@ export default function Page() {
               />
             }
           >
-            <p className="px-4  border-4 border-dashed border-color p-2 rounded-xl">
+            <p className="text-xl font-medium">
               Visit one of our <FoodSharesLink />
             </p>
           </DonationCard>

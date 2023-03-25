@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <CardSection title="Volunteer">
       <div className="text-lg">
-        <p className="text-3xl mb-8 display-text text-cs-pink">
+        <p className="text-3xl my-6 display-text text-cs-pink">
           We couldn&apos;t do it without our awesome volunteers and community
           members.
         </p>
