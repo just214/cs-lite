@@ -7,8 +7,8 @@ import { FoodSharesLink } from "components/FoodSharesLink";
 export function AboutSection() {
   return (
     <CardSection title="About Us" className="col-span-8 lg:col-span-3 h-full">
-      <div className="surface p-4 rounded-xl mb-4 font-semibold text-xl">
-        <p className="flex items-center gap-2 text-yellow-500 mb-4 text-3xl">
+      <div className="surface p-4 rounded-xl font-medium text-xl mb-8">
+        <p className="flex items-center gap-2 text-yellow-500 mb-4 text-2xl">
           Did you know <FaQuestionCircle />
         </p>
         <p>
@@ -17,7 +17,7 @@ export function AboutSection() {
         </p>
       </div>
 
-      <ul className="list-disc pl-6 space-y-8">
+      <ul className="list space-y-8">
         <li>
           <p>
             Community Solidarity is a 501(c)3 nonprofit organization founded in
@@ -28,8 +28,8 @@ export function AboutSection() {
         </li>
         <li>
           <p>
-            <b>FOOD IS A RIGHT</b>, not a privilege. This simple principle is
-            core to our organization.
+            <b className="text-cs-pink">FOOD IS A RIGHT</b>, not a privilege.
+            This simple principle is core to our organization.
           </p>
         </li>
 
@@ -39,7 +39,7 @@ export function AboutSection() {
             vegetarian groceries to families in need all across Long Island and
             Brooklyn. The food is distributed at our five <FoodSharesLink />.
             You can think of a Food Shares as essentially free plant-based
-            grocery stores that are located across Long Island &apos; NYC.
+            grocery stores that are located across Long Island and NYC.
           </p>
         </li>
         <li>

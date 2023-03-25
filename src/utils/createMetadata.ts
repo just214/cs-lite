@@ -1,3 +1,5 @@
+import { baseUrl } from "constants/baseUrl";
+
 import type { Metadata } from "next";
 
 type Args = {
@@ -19,12 +21,7 @@ export function createMetadata(args?: Args): Metadata {
   const path = args?.path || defaultPath;
   const image = args?.image || defaultImage;
 
-  const SITE_URL =
-    process.env.NODE_ENV === "production"
-      ? "https://cs-lite.vercel.app"
-      : "http://localhost:3000";
-
-  const url = `${SITE_URL}${path}`;
+  const url = `${baseUrl}${path}`;
   return {
     title,
     description,

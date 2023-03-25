@@ -36,14 +36,13 @@ export const DonateButton = () => (
       <input name="currency_code" type="hidden" value="USD" />
     </div>
 
-    <button
-      type="submit"
-      className="display-text px-8 text-white text-4xl animation-all duration-200 ease-in-out inline-flex glow items-center gap-2 justify-center rounded-lg py-3 border-none  bg-gradient-to-br hover:bg-gradient-to-bl from-sky-900  to-purple-900 flex-col"
-    >
-      <span>Donate now!</span>
-      <div className="items-center gap-1 flex text-xl">
-        <FaCcVisa /> <FaCcMastercard /> <FaCcAmex />
-        <FaCcDiscover />
+    <button type="submit" className="btn">
+      <div className="mx-6 flex flex-col items-center gap-2 justify-center">
+        <span className="text-3xl">Donate now!</span>
+        <div className="items-center gap-1 flex text-xl">
+          <FaCcVisa /> <FaCcMastercard /> <FaCcAmex />
+          <FaCcDiscover />
+        </div>
       </div>
     </button>
   </form>

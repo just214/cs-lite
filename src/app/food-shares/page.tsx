@@ -1,6 +1,7 @@
 import { FaCarSide } from "react-icons/fa";
 import { GiWalk } from "react-icons/gi";
 
+import { Anchor } from "components/Anchor";
 import { Card } from "components/Card";
 import { SectionTitle } from "components/SectionTitle";
 import { AirTableFoodShare } from "types";
@@ -47,15 +48,13 @@ export default async function FoodSharePage() {
                 </div>
 
                 <div className="mt-6">
-                  <a
-                    className="btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Anchor
+                    variant="button"
                     href={foodShare.fields.Link}
                     key={foodShare.fields.Link}
                   >
                     Learn More
-                  </a>
+                  </Anchor>
                 </div>
               </section>
 

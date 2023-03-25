@@ -19,7 +19,7 @@ const ICON_COLOR_MAP = {
 export function Alert(props: Props) {
   const { variant, icon: Icon, title } = props;
   const baseClassNames =
-    "flex w-full items-center gap-2 my-2 text-base border-l-2 rounded-lg  p-2";
+    "flex w-full items-center gap-2 my-2 text-base rounded-lg  p-2";
   const variantClassNames = STYLE_MAP[variant];
   return (
     <p className={`${baseClassNames} ${variantClassNames}`}>

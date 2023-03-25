@@ -8,6 +8,7 @@ import {
   FaWalking,
 } from "react-icons/fa";
 
+import { Anchor } from "components/Anchor";
 import { Card } from "components/Card";
 import { DonateButton } from "components/DonateButton";
 import { FoodSharesLink } from "components/FoodSharesLink";
@@ -101,22 +102,20 @@ export default function Page() {
             </p>
           </DonationCard>
           <DonationCard title="Superstar" icon={BsStars}>
-            <a
-              className="btn mt-4 w-full"
+            <Anchor
+              variant="button"
               href="https://give.communitysolidarity.org/give/214062/#!/donation/checkout"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Become a monthly sustainer!
-            </a>
-            <a
+            </Anchor>
+
+            <span className="inline-block mt-3">- or -</span>
+            <Anchor
               href="https://give.communitysolidarity.org/campaign/community-campaign/c269349"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block anchor mt-8 w-full"
+              className="text-center block"
             >
               Start a Fundraiser!
-            </a>
+            </Anchor>
           </DonationCard>
         </section>
       </div>
@@ -129,7 +128,10 @@ export default function Page() {
             return (
               <li key={label as string}>
                 <Card className="justify-center md:justify-start flex items-center gap-2">
-                  <Icon />
+                  <div className="text-cs-pink text-2xl p-1 rounded-full surface">
+                    <Icon />
+                  </div>
+
                   <p className="font-medium text-lg">{label as string}</p>
                 </Card>
               </li>
