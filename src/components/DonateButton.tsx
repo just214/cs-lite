@@ -38,7 +38,7 @@ export const DonateButton = () => (
 
     <button
       type="submit"
-      className="display-text tracking-wider text-gray-800 text-4xl uppercase font-bold cursor-pointer ease-in-out inline-flex glow items-center gap-2 justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl from-pink-500  to-sky-300 flex-col !w-72 transition-all duration-200"
+      className="display-text px-8 text-white text-4xl animation-all duration-200 ease-in-out inline-flex glow items-center gap-2 justify-center rounded-lg py-3 border-none  bg-gradient-to-br hover:bg-gradient-to-bl from-sky-900  to-purple-900 flex-col"
     >
       <span>Donate now!</span>
       <div className="items-center gap-1 flex text-xl">

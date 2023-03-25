@@ -8,7 +8,7 @@ export function AboutSection() {
   return (
     <CardSection title="About Us" className="col-span-8 lg:col-span-3 h-full">
       <div className="surface p-4 rounded-xl mb-4 font-semibold text-xl">
-        <p className="flex items-center gap-2 text-yellow-500 mb-4 text-4xl">
+        <p className="flex items-center gap-2 text-yellow-500 mb-4 text-3xl">
           Did you know <FaQuestionCircle />
         </p>
         <p>

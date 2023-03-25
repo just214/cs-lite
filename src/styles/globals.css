@@ -27,7 +27,7 @@
   }
 
   .btn {
-    @apply display-text cursor-pointer transition-colors duration-1000 ease-in-out inline-flex  items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-blue-500 to-sky-700;
+    @apply display-text text-2xl cursor-pointer transition-colors duration-1000 ease-in-out inline-flex  items-center gap-2 text-white font-medium justify-center rounded-lg py-3 px-6 border-none  bg-gradient-to-br hover:bg-gradient-to-bl hover:bg-opacity-90 from-blue-500 to-sky-700;
   }
 
   .surface-alt {

@@ -6,11 +6,12 @@ export default function Page() {
   return (
     <CardSection title="Volunteer">
       <div className="text-lg">
-        <p>
-          We couldn&apos;t do what we do without our awesome volunteers and
-          community members. Here are just some of the ways that you can get
-          involved:
+        <p className="text-3xl mb-8 display-text text-cs-pink">
+          We couldn&apos;t do it without our awesome volunteers and community
+          members.
         </p>
+
+        <p>Here are just some of the ways that you can get involved:</p>
 
         <ul className="list-disc ml-6 mt-8">
           <li>
