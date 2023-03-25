@@ -16,9 +16,9 @@ export const Header = () => {
                 C<span className="text-cs-pink">S</span>
                 <span className="text-2xl ml-2">Lite</span>
               </p>
-              <p className="text-[10px] xl:text-sm text-alt -mt-2">
+              <p className="text-[10px] xl:text-sm text-alt -mt-4 md:mt-0">
                 <span className="font-sans">A</span>
-                <span className="text display-text"> COMMUNITY </span>
+                <span className="display-text"> COMMUNITY </span>
                 <span className="text-cs-pink display-text">SOLIDARITY </span>
                 <span className="font-sans">project</span>
               </p>

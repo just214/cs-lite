@@ -24,7 +24,7 @@ export function MissionCycleCard() {
 
   const currentItem = values[currentIndex];
   return (
-    <p className="display-text text-white my-8 text-5xl md:text-6xl bg-cs-pink pb-2 pt-3 rounded-xl max-w-5xl mx-auto">
+    <p className="display-text text-white mb-8  text-4xl md:text-6xl bg-cs-pink pb-2 pt-3 rounded-xl max-w-5xl mx-auto">
       <span key={currentIndex} className="animate-fade">
         {currentItem}
       </span>
