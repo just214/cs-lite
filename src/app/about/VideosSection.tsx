@@ -1,9 +1,10 @@
 "use client";
 
+import ReactPlayer from "react-player";
+
 import { CardSection } from "components/CardSection";
 
 import { Carousel } from "./Carousel";
-import { YoutubeSlide } from "./YoutubeSlide";
 
 const YOUTUBE_VIDEO_IDS = [
   "SbZTR5rMvn4",
@@ -35,20 +36,24 @@ export function VideosSection() {
     <CardSection title="Videos">
       <Carousel
         width="100%"
-        className="w-full max-w-96"
         emulateTouch={true}
-        showArrows={true}
+        showArrows={false}
         showThumbs={true}
         showIndicators={false}
         showStatus={false}
-        infiniteLoop={true}
+        infiniteLoop={false}
         renderItem={customRenderItem}
         renderThumbs={customRenderThumb}
       >
         {YOUTUBE_VIDEO_IDS.map((videoId) => {
           return (
-            <YoutubeSlide
+            <ReactPlayer
               key={videoId}
+              className="aspect-video"
+              muted={true}
+              controls={true}
+              width="100%"
+              playsinline={true}
               url={`https://www.youtube.com/embed/${videoId}`}
             />
           );

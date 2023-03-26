@@ -38,10 +38,18 @@ export default async function FoodSharePage() {
                   {foodShare.fields["Distribution Type"]}
                 </p>
 
-                <div className="my-8 text-lg">
-                  <p>Volunteer @ {foodShare.fields["Volunteer Start Time"]}</p>
+                <div className="my-8 text-lg font-semibold">
                   <p>
-                    Distribution @ {foodShare.fields["Distribution Start Time"]}
+                    Volunteer @{" "}
+                    <span className="text-cs-pink">
+                      {foodShare.fields["Volunteer Start Time"]}
+                    </span>
+                  </p>
+                  <p>
+                    Distribution @{" "}
+                    <span className="text-cs-pink">
+                      {foodShare.fields["Distribution Start Time"]}
+                    </span>
                   </p>
 
                   <p>Located at {foodShare.fields.Address}</p>

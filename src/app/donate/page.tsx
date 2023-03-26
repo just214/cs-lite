@@ -29,7 +29,7 @@ function DonationCard(props: DonationCardProps) {
   return (
     <Card>
       <div className="flex flex-col items-center h-64 justify-between max-w-sm mx-auto">
-        <div className="flex items-center gap-2 font-bold text-4xl my-4 display-text text-cs-pink">
+        <div className="flex items-center gap-2 font-bold text-4xl my-4 display-text">
           <Icon />
           {title}
         </div>
@@ -55,7 +55,7 @@ export default function Page() {
         </p>
         <SectionTitle>Monetary Donation</SectionTitle>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4">
+        <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
           <DonationCard
             title="PayPal"
             icon={FaPaypal}
@@ -124,15 +124,13 @@ export default function Page() {
 
       <div className="mt-24">
         <SectionTitle>Item Donations</SectionTitle>
-        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {donationTypes.map((type) => {
             const [label, Icon] = type;
             return (
               <li key={label as string}>
                 <Card className="justify-center md:justify-start flex items-center gap-2">
-                  <div className="text-cs-pink text-2xl p-1 rounded-full surface">
-                    <Icon />
-                  </div>
+                  <Icon className="text-2xl" />
 
                   <p className="font-medium text-lg">{label as string}</p>
                 </Card>
