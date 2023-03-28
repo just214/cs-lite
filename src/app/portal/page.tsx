@@ -1,5 +1,7 @@
 // import { useEffect, useState } from "react";
 
+import { EnterLogForm } from "./EnterLogForm";
+
 // import { Tab } from "@headlessui/react";
 
 // import Account from "components/Account";
@@ -128,5 +130,9 @@
 // }
 
 export default async function PortalPage() {
-  return <p>Coming Soon.</p>;
+  return (
+    <div>
+      <EnterLogForm />
+    </div>
+  );
 }

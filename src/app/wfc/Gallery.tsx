@@ -9,7 +9,7 @@ import { images } from "constants/wfc-album";
 export function Gallery() {
   const values = shuffle(images);
   return (
-    <Masonry>
+    <Masonry gutter="10px">
       {values.map((src) => {
         return (
           <Image
