@@ -30,7 +30,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/scripts/fetch-cloudinary-resources.js"
   ],
   "exclude": [
     "node_modules"

@@ -1,15 +1,11 @@
+"use client";
+
 import { CardSection } from "components/CardSection";
+import { images } from "constants/photo-album";
 
 import { Carousel } from "./Carousel";
 
 export function PhotosSection() {
-  const NUMBER_OF_PHOTOS = 65;
-
-  const photos = Array.from(
-    { length: NUMBER_OF_PHOTOS },
-    (_, i) => `/album/${i + 1}.jpg`
-  );
-
   return (
     <CardSection title="Photos">
       <Carousel
@@ -19,9 +15,9 @@ export function PhotosSection() {
         autoPlay={true}
         showIndicators={false}
       >
-        {photos.map((photo) => (
+        {images.map((photo) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={photo} src={photo} alt="CS Photos" />
+          <img key={photo.url} src={photo.url} alt="CS Photos" />
         ))}
       </Carousel>
     </CardSection>
