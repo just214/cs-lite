@@ -131,8 +131,8 @@ import { EnterLogForm } from "./EnterLogForm";
 
 export default async function PortalPage() {
   return (
-    <div>
-      <EnterLogForm />
+    <div className="grid place-items-center">
+      <p className="text-4xl font-display">🚧 Coming soon! </p>
     </div>
   );
 }

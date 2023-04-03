@@ -52,6 +52,7 @@ export function VideosSection() {
               className="aspect-video"
               muted={true}
               controls={true}
+              forceSafariHLS={true}
               width="100%"
               playsinline={true}
               url={`https://www.youtube.com/embed/${videoId}`}

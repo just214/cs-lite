@@ -49,7 +49,7 @@ export default function IndexPage() {
           {links.map((link) => {
             const Icon = link.icon;
             const baseClasses =
-              "display-text text-white text-3xl w-full h-52 md:w-72 md:h-72 bubbles p-4 flex flex-col items-center justify-center  rounded-xl";
+              "display-text text-white text-5xl w-full h-52 md:w-72 md:h-72 bubbles p-4 flex flex-col items-center justify-center  rounded-xl";
             const pseudoClasses =
               "hover:shadow-xl focus:shadow-xl  transition-all ease-in-out";
             return (
@@ -59,7 +59,7 @@ export default function IndexPage() {
                   className={`${baseClasses} ${pseudoClasses} ${link.bg} group`}
                 >
                   <Icon />
-                  <p className="mt-2 text-4xl display-text group-hover:underline">
+                  <p className="mt-4 text-5xl display-text group-hover:underline">
                     {link.label}
                   </p>
                 </Link>

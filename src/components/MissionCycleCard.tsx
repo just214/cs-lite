@@ -24,8 +24,8 @@ export function MissionCycleCard() {
 
   const currentItem = values[currentIndex];
   return (
-    <p className="grid place-items-center display-text  mb-8 text-4xl md:text-6xl p-3 rounded-xl max-w-5xl mx-auto h-24 md:h-auto border-2 border-cs-pink">
-      <span key={currentIndex} className="animate-fade">
+    <p className="grid place-items-center display-text mb-8 text-4xl md:text-6xl rounded-xl p-3 max-w-5xl mx-auto h-24 md:h-auto border-4 border-color">
+      <span key={currentIndex} className="animate-fade -mt-1 md:mt-2">
         {currentItem}
       </span>
     </p>
