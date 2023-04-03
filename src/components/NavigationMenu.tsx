@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { NavLink } from "components/NavLink";
 
 const navLinks = [
+  ["Home", "/"],
   ["Food Shares", "/food-shares"],
   ["Volunteer", "/volunteer"],
   ["Donate", "/donate"],
@@ -15,8 +16,10 @@ const navLinks = [
 
 export const NavigationMenu = ({
   orientation,
+  onClick,
 }: {
   orientation: "row" | "col";
+  onClick?: (path: string) => void;
 }) => {
   const pathname = usePathname();
   const isRow = orientation === "row";
@@ -29,7 +32,12 @@ export const NavigationMenu = ({
       >
         {navLinks.map(([label, to]) => (
           <li key={to}>
-            <NavLink to={to} label={label} isActive={pathname === to} />
+            <NavLink
+              to={to}
+              label={label}
+              isActive={pathname === to}
+              onClick={onClick}
+            />
           </li>
         ))}
       </ul>

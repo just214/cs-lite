@@ -23,6 +23,12 @@ export const MobileNavigation = () => {
     setIsOpen(true);
   }
 
+  function handleClick(path: string) {
+    if (path === pathname) {
+      setIsOpen(false);
+    }
+  }
+
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -74,7 +80,7 @@ export const MobileNavigation = () => {
                     <ThemeSwitch />
                   </div>
 
-                  <NavigationMenu orientation="col" />
+                  <NavigationMenu orientation="col" onClick={handleClick} />
 
                   <section className="w-full text-center mt-8">
                     <button

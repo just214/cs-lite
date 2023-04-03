@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
 
 type Props = {
   label: React.ReactNode;
   to: string;
   isActive?: boolean;
+  onClick?: (path: string) => void;
 };
 
 export const NavLink = (props: Props) => {
@@ -14,7 +17,11 @@ export const NavLink = (props: Props) => {
     ? " bg-gray-500/10 text-cs-pink"
     : "hover:bg-gray-500/10  focus:bg-gray-500/10 text-alt";
   return (
-    <Link href={props.to} className={`${baseClassNames} ${selectedClassNames}`}>
+    <Link
+      href={props.to}
+      className={`${baseClassNames} ${selectedClassNames}`}
+      onClick={() => props.onClick?.(props.to)}
+    >
       {props.label}
     </Link>
   );
