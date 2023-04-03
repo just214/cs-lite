@@ -14,13 +14,12 @@ const navLinks = [
   ["Portal", "/portal"],
 ];
 
-export const NavigationMenu = ({
-  orientation,
-  onClick,
-}: {
+type Props = {
   orientation: "row" | "col";
   onClick?: (path: string) => void;
-}) => {
+};
+
+export const NavigationMenu = ({ orientation, onClick }: Props) => {
   const pathname = usePathname();
   const isRow = orientation === "row";
   return (
