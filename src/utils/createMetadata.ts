@@ -36,7 +36,7 @@ export function createMetadata(args?: Args): Metadata {
           url: image,
           width: 1200,
           height: 628,
-          alt: "Long Island JavaScript",
+          alt: "Community Solidarity",
         },
       ],
       locale: "en-US",
@@ -45,17 +45,12 @@ export function createMetadata(args?: Args): Metadata {
 
     // Icons
     icons: {
-      icon: "/icon.svg",
-      // shortcut: "/shortcut-icon.png",
+      icon: "/favicon.svg",
       apple: "/apple-touch-icon.png",
-      // other: {
-      //   rel: "apple-touch-icon-precomposed",
-      //   url: "/apple-touch-icon-precomposed.png",
-      // },
     },
 
     // Manifest
-    manifest: "manifest.webmanifest",
+    manifest: "/manifest.webmanifest",
 
     // Twitter
     twitter: {

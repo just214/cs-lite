@@ -1,6 +1,6 @@
 {
-  "name": "Community Solidarity",
-  "short_name": "CS lite",
+  "name": "CS Lite",
+  "short_name": "CS Lite",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -13,8 +13,8 @@
       "sizes": "512x512"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#ea3968",
+  "background_color": "#0A0A0A",
   "display": "standalone",
   "orientation": "portrait"
 }
