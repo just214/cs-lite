@@ -2,25 +2,33 @@
 
 import shuffle from "lodash/shuffle";
 import Image from "next/image";
-import Masonry from "react-responsive-masonry";
+import PhotoAlbum from "react-photo-album";
 
 import { images } from "constants/wfc-album";
 
-export function Gallery() {
-  const values = shuffle(images);
+import type { RenderPhotoProps } from "react-photo-album";
+
+function NextJsImage({
+  imageProps: { src, alt, title, sizes, className },
+  wrapperStyle,
+}: RenderPhotoProps) {
   return (
-    <Masonry gutter="10px">
-      {values.map((src) => {
-        return (
-          <Image
-            key={src.url}
-            src={src.url}
-            height={src.height}
-            width={src.width}
-            alt="wfc"
-          />
-        );
-      })}
-    </Masonry>
+    <div style={wrapperStyle}>
+      <Image
+        fill={true}
+        src={src}
+        alt={alt}
+        title={title}
+        sizes={sizes}
+        className={className}
+      />
+    </div>
+  );
+}
+
+export function Gallery() {
+  const imgProps = shuffle(images);
+  return (
+    <PhotoAlbum layout="columns" photos={imgProps} renderPhoto={NextJsImage} />
   );
 }

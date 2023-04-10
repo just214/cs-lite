@@ -9,7 +9,6 @@ export function PhotosSection() {
   return (
     <CardSection title="Photos">
       <Carousel
-        width="100%"
         className="w-full max-w-96"
         showThumbs={true}
         autoPlay={true}
@@ -17,7 +16,7 @@ export function PhotosSection() {
       >
         {images.map((photo) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={photo.url} src={photo.url} alt="CS Photos" />
+          <img key={photo.src} src={photo.src} alt="CS Photos" />
         ))}
       </Carousel>
     </CardSection>
