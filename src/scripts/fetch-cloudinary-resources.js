@@ -67,7 +67,7 @@ const options = {
 
 fetchCloudinaryAssets({
   save_path: "./src/constants/wfc-album.ts",
-  height: 150,
+  height: 350,
   options: {
     ...options,
     prefix: "Community Solidarity/Whole Foods Commack",
