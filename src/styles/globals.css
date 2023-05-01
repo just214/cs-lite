@@ -55,7 +55,7 @@
   }
 
   .input {
-    @apply p-2 border-2 border-color rounded-lg mb-8 surface-alt;
+    @apply p-2 border-2 border-gray-300 dark:border-gray-700 rounded-lg mb-8 surface-alt;
   }
 
   .list {

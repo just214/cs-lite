@@ -36,7 +36,7 @@ export const DonateButton = () => (
       <input name="currency_code" type="hidden" value="USD" />
     </div>
 
-    <button type="submit" className="btn">
+    <button type="submit" className="bg-cs-pink text-white rounded-xl p-4">
       <div className="mx-6 flex flex-col items-center gap-2 justify-center">
         <span className="text-3xl">Donate now!</span>
         <div className="items-center gap-1 flex text-xl">
