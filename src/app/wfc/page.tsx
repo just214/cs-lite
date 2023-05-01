@@ -1,5 +1,14 @@
-import { Gallery } from "./Gallery";
+import * as React from "react";
 
-export default async function WFCPage() {
-  return <Gallery />;
+import { createMetadata } from "utils/createMetadata";
+
+import { Lightbox } from "./Lightbox";
+
+export const metadata = createMetadata({
+  title: "WFC",
+  path: "/wfc",
+});
+
+export default function App() {
+  return <Lightbox />;
 }
