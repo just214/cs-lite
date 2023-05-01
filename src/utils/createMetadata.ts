@@ -3,16 +3,16 @@ import { baseUrl } from "constants/baseUrl";
 import type { Metadata } from "next";
 
 type Args = {
-  title?: string;
+  title: string;
   description?: string;
-  path?: `/${string}`;
+  path: `/${string}`;
   image?: string;
 };
 
 const defaultTitle = "CS Lite";
 const defaultDescription =
   "Welcome to CS Lite, a Community Solidarity project.";
-const defaultPath = "";
+const defaultPath = "/";
 const defaultImage = "/cs-lite.png";
 
 export function createMetadata(args?: Args): Metadata {
@@ -23,6 +23,7 @@ export function createMetadata(args?: Args): Metadata {
 
   const url = `${baseUrl}${path}`;
   return {
+    metadataBase: new URL(baseUrl),
     title,
     description,
     // Open Graph
