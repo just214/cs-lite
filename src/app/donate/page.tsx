@@ -14,8 +14,18 @@ import { DonateButton } from "components/DonateButton";
 import { FoodSharesLink } from "components/FoodSharesLink";
 import { SectionTitle } from "components/SectionTitle";
 import { donationTypes } from "constants/donationTypes";
+import { createMetadata } from "utils/createMetadata";
 
 import { Alert } from "./Alert";
+
+const description =
+  "As a 501(c)3 organization, Community Solidarity can only grow and continue our mission with your continued financial support. Please consider making a tax deductible donation today.";
+
+export const metadata = createMetadata({
+  title: "Donate",
+  description,
+  path: "/donate",
+});
 
 type DonationCardProps = {
   title: string;
@@ -42,9 +52,6 @@ function DonationCard(props: DonationCardProps) {
     </Card>
   );
 }
-
-const description =
-  "As a 501(c)3 organization, Community Solidarity can only grow and continue our mission with your continued financial support. Please consider making a tax deductible donation today.";
 
 export default function Page() {
   return (
@@ -123,7 +130,7 @@ export default function Page() {
       </div>
 
       <div className="mt-24">
-        <SectionTitle>Item Donations</SectionTitle>
+        <SectionTitle>Other Donations</SectionTitle>
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {donationTypes.map((type) => {
             const [label, Icon] = type;

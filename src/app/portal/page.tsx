@@ -1,6 +1,12 @@
 // import { useEffect, useState } from "react";
+import { createMetadata } from "utils/createMetadata";
 
-import { EnterLogForm } from "./EnterLogForm";
+export const metadata = createMetadata({
+  title: "Portal",
+  path: "/portal",
+});
+
+// import { EnterLogForm } from "./EnterLogForm";
 
 // import { Tab } from "@headlessui/react";
 
@@ -132,7 +138,7 @@ import { EnterLogForm } from "./EnterLogForm";
 export default async function PortalPage() {
   return (
     <div className="grid place-items-center">
-      <p className="text-4xl font-display">🚧 Coming soon! </p>
+      <p className="text-4xl font-display text-cs-pink">🚧 Coming soon! </p>
     </div>
   );
 }

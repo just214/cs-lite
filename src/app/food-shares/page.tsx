@@ -6,6 +6,12 @@ import { Card } from "components/Card";
 import { SectionTitle } from "components/SectionTitle";
 import { AirTableFoodShare } from "types";
 import { fetchFoodShares } from "utils/airtable-api";
+import { createMetadata } from "utils/createMetadata";
+
+export const metadata = createMetadata({
+  title: "Food Shares",
+  path: "/food-shares",
+});
 
 export default async function FoodSharePage() {
   const shares = await fetchFoodShares();

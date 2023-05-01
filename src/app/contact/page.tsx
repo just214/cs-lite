@@ -4,8 +4,14 @@ import { MdLocalPhone, MdOutlineAlternateEmail } from "react-icons/md";
 import { Card } from "components/Card";
 import { FoodSharesLink } from "components/FoodSharesLink";
 import { SectionTitle } from "components/SectionTitle";
+import { createMetadata } from "utils/createMetadata";
 
 import { ContactForm } from "./contact-form";
+
+export const metadata = createMetadata({
+  title: "Contact",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

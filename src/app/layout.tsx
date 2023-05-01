@@ -3,7 +3,6 @@ import { Bebas_Neue } from "next/font/google";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { ThemeProvider } from "components/ThemeProvider";
-import { createMetadata } from "utils/createMetadata";
 
 import "styles/globals.css";
 
@@ -13,8 +12,12 @@ const bebas = Bebas_Neue({
   variable: "--font-bebas",
 });
 
-export const metadata = createMetadata();
-
+export const metadata = {
+  title: {
+    absolute: "CS Lite",
+    template: "%s | CS Lite",
+  },
+};
 type Props = {
   children: React.ReactNode;
 };

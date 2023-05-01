@@ -5,6 +5,12 @@ import { MdOutlineVolunteerActivism } from "react-icons/md";
 import { TbHeartHandshake } from "react-icons/tb";
 
 import { MissionCycleCard } from "components/MissionCycleCard";
+import { createMetadata } from "utils/createMetadata";
+
+export const metadata = createMetadata({
+  title: "Welcome to CS Lite!",
+  path: "/",
+});
 
 const links = [
   {
@@ -43,7 +49,10 @@ const links = [
 export default function IndexPage() {
   return (
     <div className="mx-auto text-center p-2">
-      <MissionCycleCard />
+      <div className="mb-16">
+        <MissionCycleCard />
+      </div>
+
       <nav>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto">
           {links.map((link) => {

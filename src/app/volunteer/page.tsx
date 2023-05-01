@@ -1,14 +1,20 @@
 import { CardSection } from "components/CardSection";
 import { FoodSharesLink } from "components/FoodSharesLink";
 import { NextLink } from "components/NextLink";
+import { createMetadata } from "utils/createMetadata";
+
+export const metadata = createMetadata({
+  title: "Volunteer",
+  path: "/volunteer",
+});
 
 export default function Page() {
   return (
     <CardSection title="Volunteer">
       <div className="text-lg">
         <p className="text-3xl my-6 display-text text-cs-pink">
-          We couldn&apos;t do it without our awesome volunteers and community
-          members.
+          We couldn&apos;t do what we do without our awesome volunteers and
+          community members.
         </p>
 
         <p>Here are just some of the ways that you can get involved:</p>
