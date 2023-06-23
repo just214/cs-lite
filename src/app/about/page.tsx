@@ -1,9 +1,10 @@
+import { createMetadata } from "utils/createMetadata";
+
 import { AboutSection } from "./AboutSection";
 import { PhotosSection } from "./PhotosSection";
 import { VideosSection } from "./VideosSection";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { createMetadata } from "utils/createMetadata";
 
 export const metadata = createMetadata({
   title: "About",

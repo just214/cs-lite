@@ -9,10 +9,12 @@
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "check": "npm run typecheck && npm run lint",
     "fetch:cloudinary": "npx ts-node  ./src/cloudinary/fetch-cloudinary-resources.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
+    "@supabase/supabase-js": "^2.26.0",
     "airtable": "^0.12.1",
     "dotenv": "^16.3.1",
     "encoding": "^0.1.13",
