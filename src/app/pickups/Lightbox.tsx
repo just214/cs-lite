@@ -6,7 +6,7 @@ import shuffle from "lodash/shuffle";
 import PhotoAlbum from "react-photo-album";
 import LightboxLib from "yet-another-react-lightbox";
 
-import { images } from "constants/wfc-album";
+import { images } from "cloudinary/output/pickups";
 
 import "yet-another-react-lightbox/styles.css";
 

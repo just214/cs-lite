@@ -138,7 +138,9 @@ export const metadata = createMetadata({
 export default async function PortalPage() {
   return (
     <div className="grid place-items-center">
-      <p className="text-4xl font-display text-cs-pink">🚧 Coming soon! </p>
+      <p className="text-4xl font-display text-cs-pink">
+        🚧 Under Construction!
+      </p>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
+import { images } from "cloudinary/output/slideshow";
 import { CardSection } from "components/CardSection";
-import { images } from "constants/photo-album";
 
 import { Carousel } from "./Carousel";
 
