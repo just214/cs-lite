@@ -1,24 +1,27 @@
 const fs = require("fs");
+
 const cloudinary = require("cloudinary");
 require("dotenv").config();
 
-type Args = {
-  config: {
-    cloud_name: string;
-    api_key: string;
-    api_secret: string;
-    secure: boolean;
-  };
-  options: {
-    type: string;
-    max_results: number;
-    prefix: string;
-  };
-  settings: {
-    savePath: string;
-    height: number;
-  };
+type ConfigArgs = {
+  cloud_name: string;
+  api_key: string;
+  api_secret: string;
+  secure: boolean;
 };
+
+type OptionArgs = {
+  type: string;
+  max_results?: number;
+  prefix: string;
+};
+
+type SettingArgs = {
+  out_dir: string;
+  height?: number;
+};
+
+type Args = ConfigArgs & OptionArgs & SettingArgs;
 
 type Result = {
   src: string;
@@ -26,13 +29,10 @@ type Result = {
   width: number;
 };
 
-async function fetchCloudinaryAssets(
-  config: Args["config"],
-  options: Args["options"],
-  settings: Args["settings"]
-) {
+async function fetchCloudinaryAssets(args: Args) {
   // Configure Cloudinary
-  const { cloud_name, api_key, api_secret, secure } = config;
+  const { cloud_name, api_key, api_secret, secure, ...settings } = args;
+
   cloudinary.config({
     cloud_name,
     api_key,
@@ -45,31 +45,34 @@ async function fetchCloudinaryAssets(
     nextCursor: null,
   };
 
-  await listResources({ options, settings, temp });
+  await listResources({ settings, temp });
 }
 
-type AArgs = {
-  options: Args["options"];
-  settings: Args["settings"];
+type ListResourceArgs = {
+  settings: SettingArgs & OptionArgs;
   temp: {
     values: Result[] | [];
     nextCursor: string | null;
   };
 };
 
-async function listResources(args: AArgs) {
-  const { options, settings, temp } = args;
+async function listResources(args: ListResourceArgs) {
+  const { settings, temp } = args;
+  const { height, out_dir, ...options } = settings;
   const _result = [...temp.values];
   if (temp.nextCursor) {
+    // eslint-disable-next-line functional/immutable-data
     options["next_cursor"] = temp.nextCursor;
   }
   await cloudinary.v2.api.resources(options, async function (_, res) {
     const more = res?.next_cursor;
     const resources = res?.resources;
 
-    for (let _res in resources) {
+    // eslint-disable-next-line functional/no-loop-statements
+    for (const _res in resources) {
       res = resources[_res];
       const resultTemp: any = [];
+      // eslint-disable-next-line functional/immutable-data
       resultTemp.push({
         src: settings.height
           ? res.secure_url.replace("/upload/", `/upload/h_${settings.height}/`)
@@ -79,6 +82,7 @@ async function listResources(args: AArgs) {
           ? +(res.width * (settings.height / res.height)).toFixed(0)
           : res.width,
       });
+      // eslint-disable-next-line functional/immutable-data
       _result.push(resultTemp);
     }
 
@@ -87,19 +91,19 @@ async function listResources(args: AArgs) {
         values: _result,
         nextCursor: more,
       };
-      await listResources({ options, settings, temp: _temp });
+      await listResources({ settings, temp: _temp });
     } else {
       console.info("Done 🎉");
       fs.writeFile(
-        settings.savePath,
+        settings.out_dir,
         `export const images = ${JSON.stringify(
           _result.map((url) => url[0])
         )};`,
         function (err) {
           if (err) {
-            return console.log(err);
+            return console.error(err);
           }
-          console.log("The file was saved!");
+          console.info("The file was saved!");
         }
       );
     }
