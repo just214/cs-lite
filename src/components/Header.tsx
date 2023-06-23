@@ -18,8 +18,11 @@ export const Header = () => {
               </p>
               <p className="text-[10px] xl:text-sm text-alt -mt-4 md:-mt-3">
                 <span className="font-sans">A</span>
-                <span className="display-text"> COMMUNITY </span>
-                <span className="text-cs-pink display-text">SOLIDARITY </span>
+                <span className="display-text text-cs-pink">
+                  {" "}
+                  COMMUNITY SOLIDARITY{" "}
+                </span>
+
                 <span className="font-sans">project</span>
               </p>
             </div>

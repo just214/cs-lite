@@ -2,9 +2,9 @@ import Airtable from "airtable";
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { AirTableFoodShare } from "types";
-const base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN }).base(
-  process.env.AIRTABLE_BASE_ID!
-);
+import { AIRTABLE_BASE_ID, AIRTABLE_TOKEN } from "utils/env";
+
+const base = new Airtable({ apiKey: AIRTABLE_TOKEN }).base(AIRTABLE_BASE_ID);
 
 export async function fetchFoodShares(): Promise<AirTableFoodShare[]> {
   const results: AirTableFoodShare[] = [];
